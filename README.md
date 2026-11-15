@@ -1,16 +1,34 @@
-# React + Vite
+# Lab 6: React and Node/Express Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React app (Vite) that reads and creates movie data using a Node/Express back end.
 
-Currently, two official plugins are available:
+- **Front end:** React app in this folder. Runs on http://localhost:5173
+- **Back end:** Express server in `BackEnd/server.cjs`. Runs on http://localhost:4000
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Routes on the server
 
-## React Compiler
+| Method | URL           | What it does                                   |
+| ------ | ------------- | ---------------------------------------------- |
+| GET    | `/api/movies` | Returns the list of movies as JSON (`Read.jsx`) |
+| POST   | `/api/movies` | Receives a new movie (`Create.jsx`)             |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How to run
 
-## Expanding the Oxlint configuration
+Open two terminals.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+**Terminal 1: back end**
+
+```bash
+cd BackEnd
+npm install
+npm start
+```
+
+**Terminal 2: front end**
+
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173 and use the **Read** and **Create** links.

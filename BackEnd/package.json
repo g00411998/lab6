@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.cjs",
+  "scripts": {
+    "start": "node server.cjs"
+  },
+  "dependencies": {
+    "body-parser": "^2.4.0",
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  }
+}

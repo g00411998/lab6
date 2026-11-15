@@ -1,4 +1,6 @@
-function Content(){
+// Content.jsx
+// Home page: shows a greeting and the current time.
+function Content() {
   return (
     <div>
       <h1>hello world</h1>
